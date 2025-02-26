@@ -1,10 +1,11 @@
 import os
+import openai
 from dotenv import load_dotenv
 from agent import Agent
 
 load_dotenv()
-
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+openai.api_key = OPENAI_API_KEY
 
 # Define a simple function for Agent2 that returns a greeting.
 def say_hello(name: str) -> str:
